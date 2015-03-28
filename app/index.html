@@ -1,0 +1,60 @@
+<html ng-app="theShop">
+
+<head>
+
+  <title>theShop</title>
+
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/index.css">
+
+
+  <script src="//use.typekit.net/dng5cua.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+</head>
+
+<body ng-controller="ShopController">
+
+  <nav class="navbar navbar-default">
+      <img class="logo" src="images/shop.png">
+      <h1 class="title">theShop</h1>
+
+      <!-- <ul>
+        <li>
+          <a>Men</a>
+          <ul>
+            <li><a href="#">Footwear</a></li>
+            <li><a href="#">Casualwear</a></li>
+            <li><a href="#">Formalwear</a></li>
+          </ul>
+        </li>
+        <li>
+          <a>Women</a>
+          <ul>
+            <li><a href="#">Footwear</a></li>
+            <li><a href="#">Casualwear</a></li>
+            <li><a href="#">Formalwear</a></li>
+          </ul>
+        </li>
+      </ul> -->
+
+
+  </nav>
+
+  <div ng-view>
+  </div>
+
+  <button class="btn" ng-click="doSearch()">Search</button>
+
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-route/angular-route.js"></script>
+  <script src="../bower_components/angular-resource/angular-resource.js"></script>
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/animate.js"></script>
+
+</body>
+
+</html>
