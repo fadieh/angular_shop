@@ -1,35 +1,44 @@
+body {
+  padding-top: 50px;
+}
+
 .navbar-style {
 }
 
 .navbar-default {
   border-radius: 0;
   border: 0;
-  background-color: #117499;
+  background-color: #7D7E7F;
   width: 100%;
 }
 
 .logo {
-  height: 50px;
-  width: 50px;
+  /*height: 75px;
+  width: 75px;*/
   padding: 1rem;
+  display: block;
+  margin: auto;
 }
 
-.heading {
-  padding: 2rem;
-  color: #6BB6D2;
-  font-family: "museo",serif;
-  font-weight: 700;
-  text-align: center;
+.cart {
+  width: 15px;
+  height: 20px;
+  white-space: nowrap;
+}
+
+.basket-count {
+  color: white;
+  white-space: nowrap;
 }
 
 .logo-wrap {
   width: 100px;
   margin: 0;
-
 }
 
 .title {
-  font-family: "museo",serif;
+  font-family: "adelle",serif;
+  font-style: normal;
   font-weight: 300;
   color: white;
   font-size: 2.2rem;
@@ -45,6 +54,193 @@
   width: 37px;
 }
 
-.center {
+.basket-wrapper {
+  position: relative;
+  z-index: 100;
+}
+
+.product-wraps {
+  width: 75%;
+}
+
+/* PRODUCT TILES */
+
+.products {
+  display: block;
+  margin: 10rem auto 0 auto;
+  background-color: #FFFAFA;
+}
+
+.product-wrapper {
+  height: 400px;
+  border-bottom: 2px solid #F2F4F6;
+}
+
+.product-image {
+  width: 240px;
+  height: 290px;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 1rem 0;
+}
+
+.product-info-wrap {
+
+}
+
+.product-name {
+  font-family: "adelle",serif;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.10rem;
+  font-size: 12px;
+  color: grey;
+  margin: 0;
+  text-align: center;
+}
+
+.product-price {
+  font-family: "adelle",serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.10rem;
+  color: black;
+  display: block;
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+}
+
+.add-to {
+  background-color: black;
+  color: white;
+  border: 0;
+  font-family: "adelle",serif;
+  font-style: normal;
+  font-weight: 700;
+  display: block;
+  margin: 0.5rem auto 0 auto;
+  font-size: 24px;
+  line-height: 20px;
+  width: 26px;
+}
+
+.product-text-wrapper {
+  width: 180px;
+  padding: 10px;
+}
+
+.info-holder {
+  width: 52px;
+  display: inline-block;
+  height: auto;
+}
+
+.button-holder {
+  width: 50%;
+  display: inline-block;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* BASKET */
+
+.basket-wrapper {
+  position: fixed;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+              0 2px 15px 0 rgba(0, 0, 0, 0.12);
+}
+
+.basket-logo {
+  height: 75px;
+  width: 75px;
+  display: block;
+  margin: auto;
+}
+
+.basket-image-wrap {
+  width: 100%;
+}
+
+.basket-number {
+  font-family: "adelle",serif;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+}
+
+.basket-number-2 {
+  font-family: "adelle",serif;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  font-size: 12px;
+}
+
+.basket-product {
+  font-family: "adelle",serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 0 0 0 2rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.basket-remove {
+  background-color: black;
+  color: white;
+  border: 0;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  float: right;
+  margin-right: 2rem;
+}
+
+.voucher {
+  background-color: black;
+  color: white;
+  border: 0;
+  width: 30%;
+  font-family: "adelle",serif;
+  font-style: normal;
+  font-weight: 300;
+  display: block;
+  margin: 0.25rem auto 0.25rem auto;
+
+}
+
+.basket-total-wrap {
+  position: fixed;
+  bottom: 1rem;
+  padding: 0 0 0 2rem;
+}
+
+.basket-quantity {
+  font-size: 12px;
+  float: right;
+  padding: 0 2rem 0 0;
+}
+
+.red {
+  color: #FF0000;
+  font-weight: 300;
+}
+
+.alert-box {
+  width: 50%;
+  position: absolute;
+  display: block;
+  left: 50%;
+  margin: 1rem 0 0 -25%;
+  height: 72px;
   text-align: center;
 }

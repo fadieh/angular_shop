@@ -1,2 +1,59 @@
-<h1>OH HEYYYY</h1>
-<h1>YO MAN WORK</h1>
+<body ng-controller="ShopController">
+
+  <section class="basket-wrapper ">
+    <section class="basket-image-wrap">
+      <img class="basket-logo" src="images/bag.png">
+    </section>
+    <section class="basket-voucher-wrap">
+      <li ng-repeat="voucher in vouchers">
+        <button class="voucher" ng-click="useVoucher(voucher)">£{{voucher.amount}} off</button>
+      </li>
+    </section>
+    <section class="basket-text-wrap">
+      <h4 class="basket-number">{{ totalItems || 0 }} items</h4><br>
+        <li ng-repeat="product in currentBasket track by $index">
+          <p class="basket-product">{{product.name}}<br>
+          <b>{{product.price * product.amountRequested | currency : '£' }}</b>
+          <button class="basket-remove" ng-click="removeProduct($index, product)">-</button><span class="basket-quantity"><b>x{{product.amountRequested}}</b></span></p>
+        </li>
+      <section class="basket-total-wrap">
+        <h4 class="basket-number basket-total">Total: {{calculateTotal() | currency : '£'}}</h4>
+        <h4 class="basket-number-2">Discounted: -{{discounted | currency : '£'}}</h4>
+      </section>
+    </section>
+  </section>
+
+  <section class="products-wrap col-md-9">
+    <section class="alert-wrapper">
+          <section class="alert alert-warning alert-dismissible alert-box">
+            <li ng-repeat="alert in currentAlerts">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            {{alert.message}}
+            </li>
+          </section>
+    </section>
+    <div class="row products">
+      <li ng-repeat="product in products">
+        <section class="product-wrapper col-md-4">
+          <section class="product-image-wrap">
+            <img src="images/products/{{product.id}}.jpg" class="product-image">
+          </section>
+          <section class="product-info-wrap">
+            <h4 class="product-name">{{product.name}}</h4>
+            <h4 class="product-name">{{product.category}}</h6>
+            <h4 class="product-name">{{product.description}}</h6>
+            <h4 class="product-price"><b>{{product.price | currency : '£'}}</b></h4>
+            <div ng-if="product.quantity != 0">
+                <h4 class="product-price"><b>{{product.quantity}}</b> left</h6>
+                <button class="add-to" ng-click="addProduct(product)">+</button>
+            </div>
+            <div ng-if="product.quantity == 0">
+                <h4 class="product-price red"><b>Out of Stock</b></h6>
+            </div>
+          </section>
+        </section>
+      </li>
+    </div>
+  </section>
+
+</body>
